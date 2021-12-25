@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "get-annotations"
+version = "0.1.0"
+homepage = "https://github.com/shawwn/get-annotations"
+description = "A backport of Python 3.10's inspect.get_annotation() function"
+authors = ["Shawn Presser"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "get_annotations"}]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+
+[build-system]
+requires = ["setuptools", "poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+"Shawn's Website" = "https://www.shawwn.com"
+"Support me on Patreon" = "https://www.patreon.com/shawwn"
+"@theshawwn on Twitter" = "https://www.twitter.com/theshawwn"
+"sillysaurusx on Hacker News" = "https://news.ycombinator.com/threads?id=sillysaurusx"
