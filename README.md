@@ -1,6 +1,6 @@
 # get-annotations
 
-A backport of Python 3.10's [`inspect.get_annotations()`](https://docs.python.org/3/library/inspect.html#inspect.get_annotations) function
+A backport of Python 3.10's [`inspect.get_annotations()`](https://docs.python.org/3/library/inspect.html#inspect.get_annotations) function.
 
 ## Install
 
@@ -11,10 +11,7 @@ pip3 install -U get-annotations
 ## Usage
 
 ```py
-try:
-  from inspect import get_annotations
-except ImportError:  # Python is older than 3.10
-  from get_annotations import get_annotations
+from get_annotations import get_annotations
 
 def foo(x: int) -> str: ...
 
