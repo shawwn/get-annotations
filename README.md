@@ -22,7 +22,7 @@ print(get_annotations(foo))
 
 If your module uses `from __future__ import annotations`, you'll want to set `eval_str=True`, otherwise `get_annotations` will return strings:
 
-```
+```py
 from __future__ import annotations
 import typing as t
 
@@ -40,7 +40,7 @@ print(get_annotations(bar, eval_str=True))
 
 Note that it does _not_ work with old-style forward ref annotations, such as `t.List["MyObject"]`:
 
-```
+```py
 >>> from typing import List
 >>> def foo(a: int) -> List["MyObject"]: ...
 ...
@@ -56,7 +56,7 @@ Note that it does _not_ work with old-style forward ref annotations, such as `t.
 
 If you _really_ don't want to use `from __future__ import annotations` for some reason, you can surround an entire type annotation in quotes to forward ref it:
 
-```
+```py
 >>> def foo(a: int) -> "List[MyObject]": ...
 ...
 >>> print(get_annotations(foo, eval_str=True)) # This works now
