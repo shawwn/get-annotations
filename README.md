@@ -13,7 +13,7 @@ pip3 install -U get-annotations
 ```py
 try:
   from inspect import get_annotations
-except ImportError:
+except ImportError:  # Python is older than 3.10
   from get_annotations import get_annotations
 
 def foo(x: int) -> str: ...
